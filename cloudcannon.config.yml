@@ -1,10 +1,39 @@
+_schema: _schema
+collections_config:
+  sites:
+    icon: link
+    disable_url: false
+    description: ''
+    preview:
+      gallery:
+        text: ' '
+    _enabled_editors:
+      - data
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    schemas:
+      default:
+        path: src/_schemas/site.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        icon: notes
+collection_groups:
+  - heading: Sites
+    collections:
+      - sites
 _inputs:
   date:
     type: date
     label: Published on
     comment: The blog post or site was published on this day.
+    cascade: true
   layout:
+    type: auto
     hidden: true
+    cascade: true
   tags:
     type: multiselect
     options:
@@ -19,14 +48,5 @@ _inputs:
         - Progressive Enhancement
         - Responsive Web Design
         - Web Design
-collections_config:
-  sites:
-    icon: link
-    preview:
-      gallery:
-        text: " "
-    _enabled_editors:
-      - data
-    schemas:
-      default:
-        path: src/_schemas/site.md
+    cascade: true
+timezone: Etc/UTC
