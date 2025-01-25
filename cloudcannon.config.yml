@@ -1,6 +1,7 @@
 _schema: _schema
 collections_config:
   sites:
+    path: sites
     icon: link
     disable_url: false
     description: ''
