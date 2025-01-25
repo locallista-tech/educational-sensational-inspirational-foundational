@@ -45,7 +45,8 @@ module.exports = function(eleventyConfig) {
 	});
 
 	async function remoteImage(url, title, isLCP = false, useOpenGraph = false) {
-		let remoteUrl = `https://v1.${useOpenGraph ? "opengraph" : "screenshot"}.11ty.dev/${encodeURIComponent(url)}/opengraph/`
+		return ""
+		let remoteUrl = ``
 		let metadata = await Image(remoteUrl, {
 			widths: [400, 800],
 			formats: ["webp", "jpeg"],
